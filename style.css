@@ -1,0 +1,146 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+/* typography */
+
+:root {
+  --bg-color: hsl(30, 38%, 92%);
+  --bg-color-nuteral: hsl(0, 0%, 100%);
+  --font-weight-medium: 500;
+  --font-weight-strong: 700;
+  --bg-primary: hsl(158, 36%, 37%);
+  --color-primary: hsl(228, 12%, 48%);
+  --color-secondary: hsl(212, 21%, 14%);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  background-color: var(--bg-color);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+/* images section */
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-desktop {
+  display: none;
+}
+
+/* content section */
+
+.content {
+  background: var(--bg-color-nuteral);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content h1 {
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 2px;
+  font-weight: 100;
+  font-size: 1.7rem;
+}
+
+.content h2,
+.price-new {
+  font-family: "Fraunces", serif;
+  font-weight: var(--font-weight-strong);
+  font-size: 3.7rem;
+}
+
+.content p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--color-primary);
+  word-spacing: 1.5px;
+}
+
+button {
+  background-color: var(--bg-primary);
+  display: flex;
+  width: 100%;
+  color: var(--bg-color-nuteral);
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.add-icon {
+  width: 20px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.price-new {
+  color: var(--bg-primary);
+}
+
+.price-old {
+  text-decoration: line-through;
+}
+
+.add-to-cart {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 678px) {
+  .image-mobile {
+    display: none;
+  }
+
+  .image-desktop {
+    display: block;
+  }
+
+  .container {
+    flex-direction: row;
+    max-width: 600px;
+  }
+  .images {
+    flex: 1;
+  }
+  .content {
+    flex: 1;
+  }
+
+  .image-desktop {
+    height: 100%;
+  }
+
+  .img-desktop {
+    height: 100%;
+    object-fit: cover;
+  }
+}
