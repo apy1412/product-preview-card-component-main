@@ -90,6 +90,7 @@ button {
   gap: 1.5rem;
   padding: 1.5rem;
   border-radius: 10px;
+  border: 0;
 }
 
 .add-icon {
@@ -129,10 +130,10 @@ button {
     max-width: 600px;
   }
   .images {
-    flex: 1;
+    flex: 1 0 300px;
   }
   .content {
-    flex: 1;
+    flex: 1 0 300px;
   }
 
   .image-desktop {
